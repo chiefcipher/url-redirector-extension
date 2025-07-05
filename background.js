@@ -1,0 +1,1 @@
+// Background script (empty for now, but required for manifest v3)
