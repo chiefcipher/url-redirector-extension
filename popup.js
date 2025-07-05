@@ -13,7 +13,7 @@ function useProtocolUtil() {
 
 function useDomainUtils() {
   // Function to update the saved domains list in the popup
-   function updateSavedDomainsList() {
+  function updateSavedDomainsList() {
     chrome.storage.local.get({ savedDomains: [] }, (result) => {
       const savedDomainsListContainer = document.getElementById("savedDomains");
       savedDomainsListContainer.innerHTML = "";
@@ -106,4 +106,3 @@ chrome.storage.local.get(["lastUsedDomain", "savedDomains"], (result) => {
     updateSavedDomainsList();
   }
 });
-
