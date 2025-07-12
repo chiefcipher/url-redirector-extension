@@ -1,13 +1,9 @@
 {
   "manifest_version": 3,
   "name": "URL Redirector",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Redirect URLs to another domain while keeping the path",
-  "permissions": [
-    "storage",
-    "activeTab",
-    "scripting"
-  ],
+  "permissions": ["storage", "activeTab"],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
