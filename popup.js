@@ -75,7 +75,12 @@ document.getElementById("redirectCurrent").addEventListener("click", () => {
 
         chrome.storage.local.set({ lastUsedDomain: targetDomain });
 
-        chrome.tabs.update(currentTab.id, { url: ensureProtocol(newUrl) });
+        // Open in new tab (instead of redirecting current tab)
+        chrome.tabs.create({
+          url: ensureProtocol(newUrl),
+          active: true, // Focus the new tab
+          index: currentTab.index + 1 
+        });
       }
     });
   }
